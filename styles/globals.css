@@ -1,16 +1,149 @@
+:root {
+  --black: #000;
+  --black2: #010101;
+  --black3: #121212;
+  --black4: #1D2228;
+  --gray: #373833;
+  --gray2: #4C4346;
+  --gray3: #a2a1a1;
+  --gray4: #e1e2e2;
+  --gray5: #e8eAe3;
+  --white: #FFF;
+  --white2: #fefefe;
+
+  --p-dark-violet: #351858;
+  --p-violet: #822b99;
+
+  --p-dark-pink: #ed158f; /* initial was #ec058e */
+  --p-dark-pink-more-contrast: #fe6bad;
+  
+  --p-pink: #f140a9;
+  --p-blue: #37b0c9;
+
+
+  --font-bold: 'League Spartan', 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-base: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-number: 'Terminal Grotesque', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --background-color: var(--black3);
+  --link-color: #553555;
+  --font-color: #FFF;
+  --emphasis-color: var(--p-dark-pink);
+}
+
+@font-face {
+  font-family: 'Terminal Grotesque';
+  src: url("/fonts/terminal-grotesque_open.otf") format("opentype"),
+      url('/fonts/terminal-grotesque.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-3.19/Inter Web/Inter-Regular.woff2') format('woff2'),
+    url('/fonts/Inter-3.19/Inter Web/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/fonts/league-spartan-master/webfonts/leaguespartan-bold.woff2') format('woff2'),
+    url('/fonts/league-spartan-master/webfonts/leaguespartan-bold.woff') format('woff');
+}
+
 html,
 body {
+  overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: var(--font-base);
+  background-color: var(--background-color);
+  color: var(--font-color);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  /*border-bottom: 1px solid var(--link-color);*/
+}
+
+em {
+  font-style: normal;
+  color: var(--emphasis-color);
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.1em;
 }
 
 * {
   box-sizing: border-box;
+}
+
+section .section-inner {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 100px 0px;
+  position: relative;
+}
+
+header {
+  background-color: var(--black2);
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header.scroll {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  height: 80px;
+  align-items: center;
+  margin: 0;
+}
+
+header li a {
+  padding: 0 24px;
+  text-decoration: none;
+}
+
+.animated-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.animated-link:after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: var(--emphasis-color);
+  transition: width .3s;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6px;
+}
+
+.animated-link:hover:after, .animated-link:active:after, .animated-link:focus:after {
+  width: 100%;
 }

@@ -1,0 +1,38 @@
+.section {
+  position: relative;
+}
+
+.section:before {
+  background-image: url('/img/Ely_japanese_zen_garden_background_c7e95b9d-0a4c-49e7-aa2e-6803ba02f8dd.png.png');
+  background-size: 100% auto;
+  background-position-y: 56%;
+  height: 475px;
+  width: 100%;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+}
+
+.title em {
+  color: var(--p-dark-pink-more-contrast);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.1em;
+  color: var(--gray4);
+}

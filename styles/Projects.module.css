@@ -1,0 +1,69 @@
+.projectList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.projectLine {
+  width: 85%;
+  margin-top: 128px;
+}
+
+.projectLine:nth-child(odd) {
+  align-self: flex-end;
+}
+
+.name {
+  font-size: 1.6em;
+}
+
+.description {
+  color: var(--gray4);
+}
+
+.tech {
+  color: var(--gray3);
+  font-size: 0.9em;
+}
+
+.screenshots {
+  display: flex;
+  column-gap: 36px;
+}
+
+.doubleScreenshotContainer {
+  background-repeat: no-repeat;
+}
+
+.screenshots img {
+  backdrop-filter: blur(15px) saturate(3);
+  /* These lines prevent the border box from clipping the blur effect */
+  padding: 3px;
+  margin: -3px;
+}
+
+/*
+.screenshots img {
+  height: 100px;
+  position: relative;
+}
+
+.screenshots img + img {
+  position: fixed;
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: -120px;
+  transition: right .3s;
+  z-index: 2;
+}
+
+.screenshots img:hover + img, .screenshots img:focus + img, .screenshots img:active + img {
+  width: auto;
+  right: 0;
+  top: 0;
+  height: 88vh;
+  left: unset;
+}
+*/

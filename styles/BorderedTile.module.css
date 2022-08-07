@@ -1,0 +1,58 @@
+.tile {
+  border-style: solid;
+  border-image-slice: 1;
+  border-radius: 24%;
+  border-width: 0;
+/*  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);*/
+  border-image-source: linear-gradient(-0.1turn, var(--p-dark-violet), var(--p-dark-pink));
+  display: block;
+  padding: 32px;
+  padding-top: 0;
+  animation: 1.3s hover ease-in infinite;
+}
+
+/*
+@keyframes hover {
+  0%   { border-image-source: linear-gradient(to left, #743ad5, #d53a9d); }
+  33% { border-image-source: linear-gradient(to left, #d53a9d, #743ad5);; }
+  66%   { border-image-source: linear-gradient(to left, #743ad5, #743ad5); }
+  100% { border-image-source: linear-gradient(to left, #743ad5, #d53a9d);; }
+}
+*/
+/*
+@keyframes hover {
+  0%   { border-image-source: linear-gradient(to left, var(--p-dark-violet), var(--p-dark-pink)); }
+  33% { border-image-source: linear-gradient(to left, var(--p-dark-pink), var(--p-dark-violet));; }
+  66%   { border-image-source: linear-gradient(to left, var(--p-dark-violet), var(--p-dark-violet)); }
+  100% { border-image-source: linear-gradient(to left, var(--p-dark-violet), var(--p-dark-pink));; }
+}
+*/
+
+@keyframes hover {
+  0%   { border-image-source: linear-gradient(0.1turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  11%   { border-image-source: linear-gradient(0.2turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  22%   { border-image-source: linear-gradient(0.3turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  33%   { border-image-source: linear-gradient(0.4turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  44%   { border-image-source: linear-gradient(0.5turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  55%   { border-image-source: linear-gradient(0.6turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  66%   { border-image-source: linear-gradient(0.7turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  77%   { border-image-source: linear-gradient(0.8turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  89%   { border-image-source: linear-gradient(0.9turn, var(--p-dark-violet), var(--p-dark-pink)); }
+  100%   { border-image-source: linear-gradient(1turn, var(--p-dark-violet), var(--p-dark-pink)); }
+}
+
+.top {
+  border-top-width: 5px;
+}
+
+.bottom {
+  border-bottom-width: 5px;
+}
+
+.left {
+  border-left-width: 5px;
+}
+
+.right {
+  border-right-width: 5px;
+}

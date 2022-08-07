@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.socialList {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.socialList li {
+  display: flex;
+  align-items: center;
+}
+
+.socialLink {
+  display: inline-flex;
+  padding: 4px;
+  transition: .2s;
+}
+
+.socialLink:hover, .socialLink:focus, .socialLink:active {
+  transform: translateY(-.3em);
+}
