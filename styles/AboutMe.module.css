@@ -36,3 +36,18 @@
   font-size: 1.1em;
   color: var(--gray4);
 }
+
+@media screen and (max-width: 768px) {
+  .section:before {
+    opacity: 0.1;
+    height: 432px;
+  }
+
+  .text {
+    font-size: 1em;
+  }
+
+  .text + .text {
+    margin-top: 32px;
+  }
+}

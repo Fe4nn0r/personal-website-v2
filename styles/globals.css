@@ -147,3 +147,18 @@ header li a {
 .animated-link:hover:after, .animated-link:active:after, .animated-link:focus:after {
   width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  section .section-inner {
+    padding: 0 24px;
+    padding-bottom: 72px;
+  }
+
+  section:first-of-type .section-inner {
+    padding-top: 72px;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+}

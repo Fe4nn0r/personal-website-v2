@@ -27,3 +27,18 @@
   color: var(--gray4);
   margin-bottom: 8px;
 } 
+
+@media screen and (max-width: 768px) {
+  .skillList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 40px;
+    column-gap: 12px;
+  }
+
+  .skill {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}

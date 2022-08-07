@@ -18,3 +18,15 @@
   margin-left: 12px;
   margin-right: 12px;
 }
+
+@media screen and (max-width: 768px) {
+  .inner, .inner a {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+  }
+  .inner a:not(:last-child):after {
+    display: none;
+  }
+}

@@ -27,43 +27,17 @@
   font-size: 0.9em;
 }
 
-.screenshots {
-  display: flex;
-  column-gap: 36px;
-}
+@media screen and (max-width: 768px) {
+  .projectLine {
+    margin-top:92px;
+    width: 100%;
+  }
 
-.doubleScreenshotContainer {
-  background-repeat: no-repeat;
-}
+  .projectLine:first-child {
+    margin-top: 48px;
+  }
 
-.screenshots img {
-  backdrop-filter: blur(15px) saturate(3);
-  /* These lines prevent the border box from clipping the blur effect */
-  padding: 3px;
-  margin: -3px;
+  .projectLine:last-child > * {
+    border-bottom: none;
+  }
 }
-
-/*
-.screenshots img {
-  height: 100px;
-  position: relative;
-}
-
-.screenshots img + img {
-  position: fixed;
-  height: 0;
-  width: 0;
-  bottom: 0;
-  right: -120px;
-  transition: right .3s;
-  z-index: 2;
-}
-
-.screenshots img:hover + img, .screenshots img:focus + img, .screenshots img:active + img {
-  width: auto;
-  right: 0;
-  top: 0;
-  height: 88vh;
-  left: unset;
-}
-*/

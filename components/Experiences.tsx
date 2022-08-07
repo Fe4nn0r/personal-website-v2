@@ -26,12 +26,12 @@ function CompanyItem({ company, index }: { company: ICompany; index: number }) {
       <div className={styles.companyItemInner}>
         {company.url === null ? (
           <h3>
-            {`${company.title} @ `}<em>{company.companyName}</em>
+            {`${company.title}`}<span className={styles.at}>@</span><em>{company.companyName}</em>
           </h3>
         ) : (
           <a href={company.url} target="_blank" rel="noreferrer" tabIndex={0}>
             <h3>
-            {`${company.title} @ `}<em>{company.companyName}</em>
+            {`${company.title}`}<span className={styles.at}>@</span><em>{company.companyName}</em>
             </h3>
           </a>
         )}

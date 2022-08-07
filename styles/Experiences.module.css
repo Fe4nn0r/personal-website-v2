@@ -82,3 +82,38 @@
 .tabLabel:hover, .tabLabel:focus, .tabLabel:active {
   cursor: pointer;
 }
+
+.at {
+  display: inline-block;
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionInner {
+    flex-direction: column;
+  }
+  .selectionList {
+    flex-direction: row;
+    column-gap: 32px;
+    overflow: scroll;
+    margin-bottom: 32px;
+  }
+
+  .selectionList label {
+    white-space: nowrap;
+  }
+
+  .companyItem h3 {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 4px;
+  }
+
+  .companyItem h3 em {
+    margin: 0;
+  }
+
+  .at {
+    display: none;
+  }
+}
