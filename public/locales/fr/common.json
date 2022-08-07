@@ -5,6 +5,10 @@
     "experiences": "Expériences",
     "projects": "Projets"
   },
+  "menu": {
+    "openIcon": "Menu",
+    "closeIcon": "Fermer"
+  },
   "aboutme": {
     "title": "Je suis <em>Florent Clerc</em>",
     "subtitle": "Un développeur fullstack, avec un intérêt particulier pour le frontend",

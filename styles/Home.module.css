@@ -59,9 +59,42 @@
   margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+.mobileNav {
+  display: none;
+}
+
+.desktopNav {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding-inline-end: 40px;
+}
+
+@media (max-width: 768px) {
+  .mobileNav {
+    display: initial;
+  }
+
+  .desktopNav {
+    display: none;
+  }
+
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .mainNavList {
+    flex-direction: column;
+    padding-top: 72px;
+    align-items: flex-start;
+    row-gap: 8px;
+    height: auto;
+  }
+
+  .mainNavList a {
+    font-size: 1.4em;
+    text-align: left;
+    width: 150px;
   }
 }

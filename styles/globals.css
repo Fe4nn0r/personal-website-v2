@@ -148,6 +148,10 @@ header li a {
   width: 100%;
 }
 
+.bm-burger-button, header > div:first-child {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   section .section-inner {
     padding: 0 24px;
@@ -160,5 +164,32 @@ header li a {
 
   h1, h2, h3 {
     text-align: center;
+  }
+
+  header {
+    position: relative;
+  }
+
+  header > div:first-child {
+    display: initial;
+  }
+
+  .bm-burger-button {
+    height: 40px;
+    position: absolute;
+    right: 24px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    display: initial;
+  }
+
+  .bm-menu {
+    background-color: var(--black2);
+  }
+
+  .bm-item-list {
+    display: flex;
+    flex-direction: column;
   }
 }

@@ -26,3 +26,18 @@
 .socialLink:hover, .socialLink:focus, .socialLink:active {
   transform: translateY(-.3em);
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .socialList {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
+    row-gap: 8px;
+  }
+}
