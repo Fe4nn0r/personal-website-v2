@@ -1,3 +1,2 @@
 #!/bin/bash
-kill -9 `cat save_pid.txt`
-rm save_pid.txt
+forever stop ./node_modules/.bin/next
