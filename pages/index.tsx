@@ -14,6 +14,7 @@ import Experiences from "../components/Experiences";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Link from "next/link";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -46,28 +47,28 @@ function Nav({
       <nav>
         <ul className={styles.mainNavList}>
           <li>
-            <a className="animated-link" href="/#aboutme" onClick={closeMenu}>
+            <Link className="animated-link" href="/#aboutme" onClick={closeMenu}>
               {t("header.aboutMe")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="animated-link" href="/#skills" onClick={closeMenu}>
+            <Link className="animated-link" href="/#skills" onClick={closeMenu}>
               {t("header.skills")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a
+            <Link
               className="animated-link"
               href="/#experiences"
               onClick={closeMenu}
             >
               {t("header.experiences")}
-            </a>
+            </Link>
           </li>
           <li>
-            <a className="animated-link" href="/#projects" onClick={closeMenu}>
+            <Link className="animated-link" href="/#projects" onClick={closeMenu}>
               {t("header.projects")}
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
