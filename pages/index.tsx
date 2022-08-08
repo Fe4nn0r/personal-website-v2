@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
+// @ts-expect-error
 import { slide as Menu } from "react-burger-menu";
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 
