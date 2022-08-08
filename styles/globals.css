@@ -28,6 +28,9 @@
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-number: 'Terminal Grotesque', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.dark {
   /* Dark scheme */
   --background-color: var(--black3);
   --link-color: #553555;
@@ -47,7 +50,9 @@
 
   --bordered-tile-color1: var(--p-dark-violet);
   --bordered-tile-color2: var(--p-dark-pink);
+}
 
+.light {
   /* Light scheme */
   --background-color: var(--white);
   --link-color: #553555;
@@ -88,7 +93,6 @@
 
 html,
 body {
-  overflow-x: hidden;
   padding: 0;
   margin: 0;
   font-family: var(--font-base);
@@ -139,12 +143,15 @@ section#experiences {
   background-color: var(--experiencess-bg-color);
 }
 
-header {
+.header {
   background-color: var(--header-footer-bg-color);
   height: 80px;
   display: flex;
   justify-content: space-between;
   color: var(--header-text-color);
+  position: sticky;
+  top: 0px;
+  z-index: 2;
 }
 
 header.scroll {
@@ -155,7 +162,7 @@ header.scroll {
   left: 0;
 }
 
-header ul {
+.header ul {
   list-style-type: none;
   display: flex;
   height: 80px;
@@ -163,9 +170,20 @@ header ul {
   margin: 0;
 }
 
-header li a {
+.header li a {
   padding: 0 24px;
   text-decoration: none;
+}
+
+.socials-dark-mode {
+  display: flex;
+  column-gap: 24px;
+}
+
+.dark-mode-toggle-container {
+  align-items: center;
+  display: flex;
+  margin-right: 24px;
 }
 
 .animated-link {
@@ -207,11 +225,15 @@ header li a {
     text-align: center;
   }
 
-  header {
+  .header {
     position: relative;
   }
 
-  header > div:first-child {
+  .header ul {
+    height: auto;
+  }
+
+  .header > div:first-child {
     display: initial;
   }
 
@@ -232,5 +254,15 @@ header li a {
   .bm-item-list {
     display: flex;
     flex-direction: column;
+  }
+
+  .socials-dark-mode {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .dark-mode-toggle-container {
+    margin-right: 0;
+    margin-left: 64px;
   }
 }

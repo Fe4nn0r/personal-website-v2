@@ -1,9 +1,12 @@
 import type { NextPage } from "next";
-import { useState } from 'react';
+import { useState } from "react";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 import { slide as Menu } from "react-burger-menu";
+import { DarkModeSwitch } from 'react-toggle-dark-mode';
+
+import useDarkMode from '../useDarkMode';
 import Socials from "../components/Socials";
 import AboutMe from "../components/AboutMe";
 import styles from "../styles/Home.module.css";
@@ -21,8 +24,23 @@ export async function getStaticProps({ locale }: { locale: string }) {
   };
 }
 
-function Nav({ className = "", closeMenu }: { className?: string; closeMenu: () => void }) {
+function Nav({
+  className = "",
+  closeMenu,
+}: {
+  className?: string;
+  closeMenu: () => void;
+}) {
   const { t } = useTranslation();
+  const [ colorTheme, setTheme ] = useDarkMode();
+
+  function toggleTheme(isDarkMode: boolean) {
+    // wtf typescript ?
+    if (typeof setTheme !== 'function') {
+      return;
+    }
+    setTheme(isDarkMode ? 'dark' : 'light');
+  }
   return (
     <div className={className}>
       <nav>
@@ -38,7 +56,11 @@ function Nav({ className = "", closeMenu }: { className?: string; closeMenu: () 
             </a>
           </li>
           <li>
-            <a className="animated-link" href="/#experiences" onClick={closeMenu}>
+            <a
+              className="animated-link"
+              href="/#experiences"
+              onClick={closeMenu}
+            >
               {t("header.experiences")}
             </a>
           </li>
@@ -49,7 +71,19 @@ function Nav({ className = "", closeMenu }: { className?: string; closeMenu: () 
           </li>
         </ul>
       </nav>
-      <Socials />
+      <div className="socials-dark-mode">
+        <Socials />
+
+        <div className="dark-mode-toggle-container">
+          <DarkModeSwitch
+            onChange={(isDarkMode: boolean) => toggleTheme(isDarkMode)}
+            checked={colorTheme === 'light'}
+            size={24}
+            sunColor="#FFF"
+            moonColor="#FFF"
+          />
+        </div>
+      </div>
     </div>
   );
 }
@@ -91,24 +125,37 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <header>
+        <div className="header">
           <Menu
             isOpen={isMenuOpen}
             className={styles.mobileNav}
-            onStateChange={({ isOpen }: { isOpen: boolean }) => setIsMenuOpen(isOpen)}
+            onStateChange={({ isOpen }: { isOpen: boolean }) =>
+              setIsMenuOpen(isOpen)
+            }
             right
             customBurgerIcon={
-              <img src="/icons/menu-line-white.svg" height={60} alt={t('menu.openIcon')} />
+              <img
+                src="/icons/menu-line-white.svg"
+                height={60}
+                alt={t("menu.openIcon")}
+              />
             }
             customCrossIcon={
-              <img src="/icons/close-line-white.svg" height={60} alt={t('menu.openIcon')} />
+              <img
+                src="/icons/close-line-white.svg"
+                height={60}
+                alt={t("menu.openIcon")}
+              />
             }
           >
             <Nav closeMenu={() => setIsMenuOpen(false)} />
           </Menu>
 
-          <Nav className={styles.desktopNav} closeMenu={() => setIsMenuOpen(false)} />
-        </header>
+          <Nav
+            className={styles.desktopNav}
+            closeMenu={() => setIsMenuOpen(false)}
+          />
+        </div>
         <AboutMe />
         <Skills />
         <Experiences />
