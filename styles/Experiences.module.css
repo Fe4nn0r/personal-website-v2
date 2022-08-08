@@ -38,25 +38,24 @@
 
 .date {
   font-family: var(--font-number);
-  color: var(--gray3);
+  color: var(--font-color-tertiary);
 }
 
 .text {
   font-size: 1.1em;
-  color: var(--gray4);
+  color: var(--font-color-secondary);
 }
 
 .companyItem {
   display: none;
   position: relative;
-  background-color: var(--black3);
+  background-color: var(--experience-company-bg-color);
 }
 
 .companyItemInner {
-  border-left: 3px solid var(--p-dark-violet);
+  border-left: 3px solid var(--experience-company-border-color);
   padding-left: 24px;
   padding-right: 24px;
-
 }
 
 .companyItem h3 {

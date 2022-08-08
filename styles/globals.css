@@ -19,6 +19,7 @@
   
   --p-pink: #f140a9;
   --p-blue: #37b0c9;
+  --p-blue-more-contrast: #006372;
 
 
   --font-bold: 'League Spartan', 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -27,10 +28,45 @@
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-number: 'Terminal Grotesque', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* Dark scheme */
   --background-color: var(--black3);
   --link-color: #553555;
   --font-color: #FFF;
+  --font-color-secondary: var(--gray4);
+  --font-color-tertiary: var(--gray3);
   --emphasis-color: var(--p-dark-pink);
+  --emphasis-color-more-contrast: var(--p-dark-pink-more-contrast);
+
+  --experience-company-bg-color: var(--black3);
+  --experience-company-border-color: var(--p-dark-violet);
+
+  --header-footer-bg-color: var(--black2);
+  --header-text-color: inherit;
+
+  --experiencess-bg-color: inherit;
+
+  --bordered-tile-color1: var(--p-dark-violet);
+  --bordered-tile-color2: var(--p-dark-pink);
+
+  /* Light scheme */
+  --background-color: var(--white);
+  --link-color: #553555;
+  --font-color: var(--black);
+  --font-color-secondary: var(--black4);
+  --font-color-tertiary: var(--gray2);
+  --emphasis-color: var(--p-blue);
+  --emphasis-color-more-contrast: var(--p-blue-more-contrast);
+
+  --experience-company-bg-color: transparent;
+  --experience-company-border-color: var(--emphasis-color);
+
+  --header-footer-bg-color: var(--black4);
+  --header-text-color: var(--white);
+
+  --experiencess-bg-color: var(--gray5);
+
+  --bordered-tile-color1: var(--p-dark-pink-more-contrast);
+  --bordered-tile-color2: var(--p-blue);
 }
 
 @font-face {
@@ -68,7 +104,7 @@ a {
 
 em {
   font-style: normal;
-  color: var(--emphasis-color);
+  color: var(--emphasis-color-more-contrast);
 }
 
 h1, h2, h3, h4, h5 {
@@ -99,11 +135,16 @@ section .section-inner {
   position: relative;
 }
 
+section#experiences {
+  background-color: var(--experiencess-bg-color);
+}
+
 header {
-  background-color: var(--black2);
+  background-color: var(--header-footer-bg-color);
   height: 80px;
   display: flex;
   justify-content: space-between;
+  color: var(--header-text-color);
 }
 
 header.scroll {
@@ -185,7 +226,7 @@ header li a {
   }
 
   .bm-menu {
-    background-color: var(--black2);
+    background-color: var(--header-footer-bg-color);
   }
 
   .bm-item-list {

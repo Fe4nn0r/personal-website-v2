@@ -24,7 +24,7 @@
 
 .skillName {
   font-size: 0.9em;
-  color: var(--gray4);
+  color: var(--font-color-secondary);
   margin-bottom: 8px;
 } 
 

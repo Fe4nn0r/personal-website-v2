@@ -22,7 +22,7 @@
 }
 
 .title em {
-  color: var(--p-dark-pink-more-contrast);
+  color: var(--emphasis-color-more-contrast);
 }
 
 .header {
@@ -34,7 +34,7 @@
 .text {
   text-align: center;
   font-size: 1.1em;
-  color: var(--gray4);
+  color: var(--font-color-secondary);
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 .main {
   padding: 16px 40px;
-  background-color: var(--black2);
+  background-color: var(--header-footer-bg-color);
   display: flex;
   align-items: center;
   color: var(--gray3);

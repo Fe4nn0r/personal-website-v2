@@ -33,7 +33,7 @@ export default function Socials() {
       <ul className={styles.socialList}>
         {socials.map((s) => (
           <li key={s.name}>
-            <a href={s.link} title={s.name} className={styles.socialLink}>
+            <a href={s.link} title={s.name} className={styles.socialLink} target="_blank" rel="noreferrer">
               <Image src={s.icon} width={s.iconWidth} height={s.iconHeight} alt={s.name} />
             </a>
           </li>

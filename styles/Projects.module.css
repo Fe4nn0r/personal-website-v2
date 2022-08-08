@@ -19,11 +19,11 @@
 }
 
 .description {
-  color: var(--gray4);
+  color: var(--font-color-secondary);
 }
 
 .tech {
-  color: var(--gray3);
+  color: var(--font-color-tertiary);
   font-size: 0.9em;
 }
 
