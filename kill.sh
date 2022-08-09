@@ -1,2 +1,2 @@
 #!/bin/bash
-forever stop ./node_modules/.bin/next
+forever stop -c "./node_modules/.bin/next start" ./
