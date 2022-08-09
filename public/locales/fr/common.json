@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Florent Clerc - Développeur Frontend",
+    "description": "Florent Clerc, 31 ans, développeur fullstack, lyonnais",
+    "keywords": "développeur frontend, développeur fullstack, cv développeur web, développeur web"
+  },
   "header": {
     "aboutMe": "A propos",
     "skills": "Compétences",
@@ -33,7 +38,7 @@
       "title": "Développeur Fullstack",
       "presentation": "Mapado est une solution complète de billeterie, qui s'adresse principalement au secteur culturel",
       "myWork": "J'ai participé à la réalisation de la solution de billeterie from scratch, à la fois sur le backend (API interne & externe), le frontend (interfaces d'achat en ligne et au guichet, dashboard client), mais aussi sur les décisions produits et UX.",
-      "tags": ["Symfony2", "ReactJS", "AngularJS", "HTML5", "CSS3"]
+      "tags": ["Symfony", "ReactJS", "AngularJS", "HTML5", "CSS3"]
     },
     "batch": {
       "date": "2014 — 2015",

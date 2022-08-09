@@ -15,6 +15,11 @@
 .socialList li {
   display: flex;
   align-items: center;
+  column-gap: 12px;
+}
+
+.socialList li a {
+  padding: 0;
 }
 
 .socialLink {
@@ -30,7 +35,7 @@
 @media screen and (max-width: 768px) {
   .container {
     justify-content: flex-start;
-    margin-top: 16px;
+    margin-top: 32px;
   }
 
   .socialList {
@@ -38,6 +43,6 @@
     display: flex;
     flex-direction: column;
     padding-left: 64px;
-    row-gap: 8px;
+    row-gap: 16px;
   }
 }

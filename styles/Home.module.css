@@ -38,6 +38,7 @@
     align-items: flex-start;
     row-gap: 8px;
     height: auto;
+    padding-left: 0;
   }
 
   .mainNavList a {

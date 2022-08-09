@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Florent Clerc - Frontend & Fullstack Developer",
+    "description": "Florent Clerc, 31 yeaars old, fullstack developer, frontend developer",
+    "keywords": "frontend developer, fullstack developer, web developer"
+  },
+  "header": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "projects": "Projects"
+  },
+  "menu": {
+    "openIcon": "Menu",
+    "closeIcon": "Close"
+  },
+  "aboutme": {
+    "title": "I am <em>Florent Clerc</em>",
+    "subtitle": "A fullstack developer, with a special interest for frontend",
+    "presentation": "With more than 10 years of experience, both in web agencies and in startups, I had the opportunities of working in multiple activity sectors (culture, data, digital marketing, ...)",
+    "presentation2": "Curious and attentive, I'm looking above all to truly understand the product to answere very need as simply as possible."
+  },
+  "skills": {
+    "baseline": "My skills",
+    "restAPIS": "REST API",
+    "categoryTools": "Skills"
+  },
+  "experiences": {
+    "in-tact": {
+      "date": "2019 - Today",
+      "title": "Fullstack developer",
+      "presentation": "Atecna is a digital agency",
+      "myWork": "I helped developed projects for clients in multiple sectors (real estate, data, healthcare, human resources), as a developer and as a scrum master. Internally, I also helped for project scoping, project estimation, and technical interviews.",
+      "tags": ["React Native", "React JS", "Strapi", "Scrum Master", "Flutter"]
+    },
+    "mapado": {
+      "date": "2015 - 2019",
+      "title": "Fullstack Developer",
+      "presentation": "Mapado is a startup developing a ticketing solution for the cultural sector",
+      "myWork": "We developed a ticketing solution from scratch. I worked on the backend and in the multiple frontends (dashboard, white-label site for ticket selling, SPA for ticket sales at the counter).",
+      "tags": ["Symfony", "ReactJS", "AngularJS", "HTML5", "CSS3"]
+    },
+    "batch": {
+      "date": "2014 — 2015",
+      "title": "Frontend developer",
+      "presentation": "Batch is a CRM for mobile applications",
+      "myWork": "Development of a dashboard for our customers, use to configure push notification campaigns and see statistics. I also developed the frontend for a push notification monitoring tool.",
+      "tags": ["Symfony2", "AngularJS"]
+    },
+    "nixdo": {
+      "date": "2012 — 2014",
+      "title": "Fullstack Developer",
+      "presentation": "Nixdo is a SAAS for small businesses to help them synchronize their information across multiple listings and social networks (ie. Foursquare, Yelp, Tripadvisor, Twitter, Facebook)",
+      "myWork": "Development of the marketing website, the landing pages, the customer dashboard, but also the algorithm to automatically synchronize information accross dozens of local and national websites",
+      "tags": ["Symfony 1.4", "Symfony2", "AngularJS", "HTML5", "CSS3"]
+    },
+    "ice-development": {
+      "date": "2011 — 2012",
+      "title": "Frontend developer",
+      "presentation": "Ice Development is a web agency",
+      "myWork": "Development of multiple projects for our customers",
+      "tags": ["HTML5", "CSS3"]
+    }
+  },
+  "projects": {
+    "baseline": "A few projects I worked on"
+  },
+  "footer": {
+    "midjourney": "Favicon and illustration generated on Midjourney",
+    "nextJS": "Site created with Next.JS"
+  }
+}

@@ -102,7 +102,7 @@ export default function Skills() {
               </h3>
               <ul className={styles.subList}>
                 {skillCategory.skills.map((skill) => (
-                  <li className={styles.skillName} key={skillCategory.name}>
+                  <li className={styles.skillName} key={skill.name}>
                     {skill.name}
                   </li>
                 ))}

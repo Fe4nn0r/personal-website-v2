@@ -1,6 +1,5 @@
 import { Trans, useTranslation } from "next-i18next";
 import styles from "../styles/Experiences.module.css";
-import Image from "next/image";
 
 interface ICompany {
   date: string;

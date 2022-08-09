@@ -5,9 +5,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Head from "next/head";
 // @ts-expect-error
 import { slide as Menu } from "react-burger-menu";
-import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { DarkModeSwitch } from "react-toggle-dark-mode";
 
-import useDarkMode from '../useDarkMode';
+import useDarkMode from "../useDarkMode";
 import Socials from "../components/Socials";
 import AboutMe from "../components/AboutMe";
 import styles from "../styles/Home.module.css";
@@ -16,6 +16,7 @@ import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export async function getStaticProps({ locale }: { locale: string }) {
   return {
@@ -34,21 +35,27 @@ function Nav({
   closeMenu: () => void;
 }) {
   const { t } = useTranslation();
-  const [ colorTheme, setTheme ] = useDarkMode();
+  const router = useRouter();
+  const locale = router.locale;
+  const [colorTheme, setTheme] = useDarkMode();
 
   function toggleTheme(isDarkMode: boolean) {
     // wtf typescript ?
-    if (typeof setTheme !== 'function') {
+    if (typeof setTheme !== "function") {
       return;
     }
-    setTheme(isDarkMode ? 'dark' : 'light');
+    setTheme(isDarkMode ? "dark" : "light");
   }
   return (
     <div className={className}>
       <nav>
         <ul className={styles.mainNavList}>
           <li>
-            <Link className="animated-link" href="/#aboutme" onClick={closeMenu}>
+            <Link
+              className="animated-link"
+              href="/#aboutme"
+              onClick={closeMenu}
+            >
               {t("header.aboutMe")}
             </Link>
           </li>
@@ -67,7 +74,11 @@ function Nav({
             </Link>
           </li>
           <li>
-            <Link className="animated-link" href="/#projects" onClick={closeMenu}>
+            <Link
+              className="animated-link"
+              href="/#projects"
+              onClick={closeMenu}
+            >
               {t("header.projects")}
             </Link>
           </li>
@@ -76,14 +87,24 @@ function Nav({
       <div className="socials-dark-mode">
         <Socials />
 
-        <div className="dark-mode-toggle-container">
+        <div className="dark-mode-toggle-language-switch-container">
           <DarkModeSwitch
             onChange={(isDarkMode: boolean) => toggleTheme(isDarkMode)}
-            checked={colorTheme === 'light'}
+            checked={colorTheme === "light"}
             size={24}
             sunColor="#FFF"
             moonColor="#FFF"
           />
+
+          {locale === "en" ? (
+            <Link href="/" locale="fr">
+              FR
+            </Link>
+          ) : (
+            <Link href="/" locale="en">
+              EN
+            </Link>
+          )}
         </div>
       </div>
     </div>
@@ -97,15 +118,9 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Florent Clerc - Développeur Frontend</title>
-        <meta
-          name="description"
-          content="Florent Clerc, 31 ans, développeur fullstack, lyonnais"
-        />
-        <meta
-          name="keywords"
-          content="développeur frontend, développeur fullstack, cv développeur web, développeur web"
-        />{" "}
+        <title>{t("meta.title")}</title>
+        <meta name="description" content={t("meta.description")} />
+        <meta name="keywords" content={t("meta.keywords")} />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
